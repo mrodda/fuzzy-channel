@@ -16,7 +16,10 @@ fn run() -> Result<(), Error> {
     Ok(())
 }
 fn main() {
+    env_logger::init();
+    info!("Start");
     if let Err(e) = run() {
         error!("Error {:?}", e);
     }
+    info!("End")
 }
